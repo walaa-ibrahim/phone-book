@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Phone Book</title>
+	<!--link of font -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">  
+	<!--Required bootstrap & css files -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="user-data w-75 py-4 m-auto">
+		<!--Heading of site-->
+		<h1 class="text-capitalize text-center my-5">phone b<span>oo</span>k</h1>
+		<!--Place of data-->
+		<form>
+			<div class="form-group userName">
+				<label for="userNameInp">Name</label>
+				<input class="form-control" type="text" name="userName" id="userNameInp">
+				<div class="alert alert-danger my-2">Please Enter Right Name</div>
+			</div>
+			<div class="form-group userPhone">
+				<label for="userphoneinp">Phone</label>
+				<input class="form-control" type="text" name="userphone" id="userphoneInp">
+				<div class="alert alert-danger my-2">Please Enter Right Phone</div>
+			</div>
+			<div class="form-group userMail">
+				<label for="userMailInp">Email</label>
+				<input class="form-control" type="email" name="Email" id="userMailInp">
+				<div class="alert alert-danger my-2">Please Enter Right Mail</div>
+			</div>
+			<div class="form-group userAddress">
+				<label for="userAdressInp">Address</label>
+				<input class="form-control" type="text" name="UserAddress" id="userAdressInp">
+				<div class="alert alert-danger my-2">Please Enter Right Address</div>
+			</div>
+			<button id="addContact" class="btn btn-info btn-lg" type="submit">Add Contact</button>
+			<button id="upDateItem" class="btn btn-info btn-lg" type="submit">Update</button>
+		</form>
+		<div class="display-data my-5">
+			<h2 class="text-capitalize text-center my-5">users data</h2>
+			<input onkeyup="searchItem(this.value)" class="form-control my-5 w-75 mx-auto" type="text" placeholder="Search">
+			<table class="table table-striped text-center">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Phone</th>
+						<th>Email</th>
+						<th>Address</th>
+						<th>
+							<span>Edit</span>
+							<span>/</span>
+							<span>Delete</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">	
+				</tbody>
+			</table>
+		</div>
+	</section>
+	
+	<!--Required js files -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/mine.js"></script>	
+</body>
+</html>
